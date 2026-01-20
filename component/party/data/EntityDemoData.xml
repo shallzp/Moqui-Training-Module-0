@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="demo">
+
+    <!-- Party with PERSON as partyType -->
+    <moqui.training.Party partyId="P001" partyTypeEnumId="PERSON" createdDate="2026-01-20T10:30:00" />
+
+    <!-- Person -->
+    <moqui.training.Person partyId="P001" firstName="Shalini" lastName="Patel" dateOfBirth="2004-01-10" />
+
+    <!-- ContactMech -->
+    <moqui.training.ContactMech contactMechId="CM001" contactMechTypeId="EMAIL" infoString="shalinipatel@gmail.com" createdDate="2026-01-20T10:30:00"/>
+    <moqui.training.ContactMech contactMechId="CM002" contactMechTypeId="TELECOM_NUMBER" infoString="+91-8888444488" createdDate="2026-01-20T10:30:00"/>
+
+    <!-- PartyContactMech -->
+    <moqui.training.PartyContactMech partyId="P001" contactMechId="CM001" fromDate="2026-01-20T10:30:00"/>
+    <moqui.training.PartyContactMech partyId="P001" contactMechId="CM002" fromDate="2026-01-20T10:30:00"/>
+
+    <!-- Data with PartyGroup Uploaded Using Data Import Tool on UI -->
+
+    <!-- Party with PARTY_GROUP as partyType -->
+    <!-- <moqui.training.Party partyId="G001" partyTypeEnumId="PARTY_GROUP" createdDate="2026-01-20T10:30:00"/> -->
+
+    <!-- PartyGroup -->
+    <!-- <moqui.training.PartyGroup partyId="G001" groupName="HOTWAX Commerce" description="Work on OOMS Solutions" /> -->
+
+    <!-- ContactMech -->
+    <!-- <moqui.training.ContactMech contactMechId="CM003" contactMechTypeId="EMAIL" infoString="hotwax.commerce@gmail.com" createdDate="2026-01-20T10:30:00"/> -->
+    <!-- <moqui.training.ContactMech contactMechId="CM004" contactMechTypeId="TELECOM_NUMBER" infoString="+91-8899442288" createdDate="2026-01-20T10:30:00"/> -->
+
+    <!-- PartyContactMech -->
+    <!-- <moqui.training.PartyContactMech partyId="G001" contactMechId="CM003" fromDate="2026-01-20T10:30:00"/> -->
+    <!-- <moqui.training.PartyContactMech partyId="G001" contactMechId="CM004" fromDate="2026-01-20T10:30:00"/> -->
+
+</entity-facade-xml>
