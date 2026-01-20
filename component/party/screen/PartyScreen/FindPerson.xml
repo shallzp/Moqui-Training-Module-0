@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+    <actions>
+        <entity-find entity-name="moqui.training.Person" list="personList" />
+    </actions>
+
+    <widgets>
+        <label type="h2" text="Person" />
+        <form-list name="ListPerson" list="personList" header-dialog="true" skip-form="true">
+            <field name="partyId">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="firstName">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="lastName">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="dateOfBirth">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+        </form-list>
+    </widgets>
+</screen>

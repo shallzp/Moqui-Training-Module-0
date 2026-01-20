@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+    <actions>
+        <entity-find entity-name="moqui.training.PartyContactMech" list="partyContactMechList" />
+    </actions>
+
+    <widgets>
+        <label type="h2" text="Party Contact Mech" />
+        <form-list name="ListPartyContactMech" list="partyContactMechList" header-dialog="true" skip-form="true">
+            <field name="partyId">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="contactMechId">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="fromDate">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="thruDate">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+        </form-list>
+    </widgets>
+</screen>

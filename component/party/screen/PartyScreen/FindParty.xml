@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+    <actions>
+        <entity-find entity-name="moqui.training.Party" list="partyList" />
+    </actions>
+
+    <widgets>
+        <label type="h2" text="Party" />
+
+        <form-list name="ListParty" list="partyList" header-dialog="true" skip-form="true">
+            <field name="partyId">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="partyTypeEnumId">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+
+            <field name="createdDate">
+                <default-field>
+                    <display />
+                </default-field>
+            </field>
+        </form-list>
+    </widgets>
+</screen>

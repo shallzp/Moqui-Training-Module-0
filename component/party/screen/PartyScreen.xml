@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+    <subscreens default-item="FindParty" />
+
+    <widgets>
+        <render-mode>
+            <text type="html,vuet" location="component://party/template/PartyScreen/title.html" />
+        </render-mode>
+
+         <subscreens-panel id="4" /> <!-- by default type="tab", in type="popup", have to change path for each subscreen -->
+    </widgets>
+</screen>
