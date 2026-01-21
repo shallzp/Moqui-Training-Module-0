@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+    <service verb="create" noun="Person" type="script"
+             location="component://party/service/party/PartyServices.groovy">
+        <in-parameters>
+            <parameter name="partyId"> <!-- We can put required="true" in each parameter, but since implementing it in groovy not needed -->
+                <matches regexp="^P\d{3,}$" message="Id must start with P for person" /> <!-- Person Ids starts with P and PartyGroup Ids starts with G -->
+            </parameter>
+            <parameter name="firstName" />
+            <parameter name="lastName" />
+            <parameter name="dateOfBirth" />
+        </in-parameters>
+
+        <out-parameters>
+            <parameter name="partyId" />
+            <parameter name="response" required="true" />
+        </out-parameters>
+    </service>
+</services>
