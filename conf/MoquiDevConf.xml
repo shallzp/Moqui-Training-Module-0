@@ -18,6 +18,9 @@
     <default-property name="entity_ds_port" value="3306"/>
     <default-property name="entity_ds_database" value="moqui"/>
 
+    <!-- overwriting this to run rest api POST -->
+    <default-property name="webapp_require_session_token" value="true"/>
+
     <!-- minimal overrides for testing on local mysql8:
     <default-property name="entity_ds_db_conf" value="mysql8"/>
     <default-property name="entity_ds_user" value="root"/>
