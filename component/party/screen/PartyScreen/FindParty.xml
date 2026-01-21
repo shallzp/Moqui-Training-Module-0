@@ -3,31 +3,57 @@
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         require-authentication="anonymous-all">
 
+    <!-- transition for calling createParty service -->
+    <transition name="createParty">
+        <service-call name="create#moqui.training.Party" />
+        <default-response url="." />
+    </transition>
+
     <actions>
         <entity-find entity-name="moqui.training.Party" list="partyList" />
     </actions>
 
     <widgets>
-        <label type="h2" text="Party" />
+        <container-box>
+            <box-header>
+                <label text="Find Party" type="h4" />
+            </box-header>
 
-        <form-list name="ListParty" list="partyList" header-dialog="true" skip-form="true">
-            <field name="partyId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+            <box-toolbar>
+                <!-- Create Party Button to open Form -->
+                <container-dialog id="createPartyDialog" button-text="Create Party">
+                    <form-single name="CreateParty" transition="createParty">
+                        <auto-fields-entity entity-name="moqui.training.Party" field-type="edit" />
+                        <field name="submitButton">
+                            <default-field title="Create">
+                                <submit />
+                            </default-field>
+                        </field>
+                    </form-single>
+                </container-dialog>
+            </box-toolbar>
 
-            <field name="partyTypeEnumId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+            <box-body>
+                <form-list name="ListParty" list="partyList" header-dialog="true" skip-form="true">
+                    <field name="partyId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="createdDate">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
-        </form-list>
+                    <field name="partyTypeEnumId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+
+                    <field name="createdDate">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+                </form-list>
+            </box-body>
+        </container-box>
     </widgets>
 </screen>
