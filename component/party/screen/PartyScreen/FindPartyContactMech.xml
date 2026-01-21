@@ -8,31 +8,38 @@
     </actions>
 
     <widgets>
-        <label type="h2" text="Party Contact Mech" />
-        <form-list name="ListPartyContactMech" list="partyContactMechList" header-dialog="true" skip-form="true">
-            <field name="partyId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+        <container-box>
+            <box-header>
+                <label type="h2" text="Party Contact Mech" />
+            </box-header>
 
-            <field name="contactMechId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+            <box-body>
+                <form-list name="ListPartyContactMech" list="partyContactMechList" header-dialog="true" skip-form="true">
+                    <field name="partyId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="fromDate">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+                    <field name="contactMechId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="thruDate">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
-        </form-list>
+                    <field name="fromDate">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+
+                    <field name="thruDate">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+                </form-list>
+            </box-body>
+        </container-box>
     </widgets>
 </screen>

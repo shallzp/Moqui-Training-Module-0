@@ -8,25 +8,32 @@
     </actions>
 
     <widgets>
-        <label type="h2" text="Party Group" />
-        <form-list name="ListPartyGroup" list="partyGroupList" header-dialog="true" skip-form="true">
-            <field name="partyId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+        <container-box>
+            <box-header>
+                <label type="h4" text="Party Group" />
+            </box-header>
 
-            <field name="groupName">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+            <box-body>
+                <form-list name="ListPartyGroup" list="partyGroupList" header-dialog="true" skip-form="true">
+                    <field name="partyId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="description">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
-        </form-list>
+                    <field name="groupName">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+
+                    <field name="description">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+                </form-list>
+            </box-body>
+        </container-box>
     </widgets>
 </screen>

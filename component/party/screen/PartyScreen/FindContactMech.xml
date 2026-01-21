@@ -8,31 +8,38 @@
     </actions>
 
     <widgets>
-        <label type="h2" text="Contact Mech" />
-        <form-list name="ListContactMech" list="contactMechList" header-dialog="true" skip-form="true">
-            <field name="contactMechId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+        <container-box>
+            <box-header>
+                <label type="h4" text="Contact Mech" />
+            </box-header>
 
-            <field name="contactMechTypeId">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+            <box-body>
+                <form-list name="ListContactMech" list="contactMechList" header-dialog="true" skip-form="true">
+                    <field name="contactMechId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="infoString">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
+                    <field name="contactMechTypeId">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
 
-            <field name="createdDate">
-                <default-field>
-                    <display />
-                </default-field>
-            </field>
-        </form-list>
+                    <field name="infoString">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+
+                    <field name="createdDate">
+                        <default-field>
+                            <display />
+                        </default-field>
+                    </field>
+                </form-list>
+            </box-body>
+        </container-box>
     </widgets>
 </screen>
