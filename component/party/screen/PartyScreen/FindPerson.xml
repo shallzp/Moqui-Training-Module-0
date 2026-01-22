@@ -9,7 +9,7 @@
     </transition>
 
     <actions>
-        <entity-find entity-name="moqui.training.Person" list="personList" />
+        <entity-find entity-name="party.Person" list="personList" />
     </actions>
 
     <widgets>
@@ -23,7 +23,7 @@
                 <!-- Create Party Button to open Form -->
                 <container-dialog id="createPersonDialog" button-text="Create Person">
                     <form-single name="CreatePerson" transition="createPerson">
-                        <auto-fields-entity entity-name="moqui.training.Person" field-type="edit" />
+                        <auto-fields-entity entity-name="party.Person" field-type="edit" />
                         <field name="submitButton">
                             <default-field title="Create">
                                 <submit />

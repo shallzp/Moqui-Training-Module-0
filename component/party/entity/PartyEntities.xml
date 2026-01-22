@@ -2,7 +2,7 @@
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-3.xsd">
 
     <!-- Party -->
-    <entity entity-name="Party" package="moqui.training">
+    <entity entity-name="Party" package="party">
         <field name="partyId" type="id" is-pk="true" />
         <field name="partyTypeEnumId" type="id" />
         <field name="createdDate" type="date-time" />
@@ -20,7 +20,7 @@
     </entity>
 
     <!-- Person -->
-    <entity entity-name="Person" package="moqui.training">
+    <entity entity-name="Person" package="party">
         <field name="partyId" type="id" is-pk="true" />
         <field name="firstName" type="text-medium" />
         <field name="lastName" type="text-medium" />
@@ -30,7 +30,7 @@
     </entity>
 
     <!-- Party Group -->
-    <entity entity-name="PartyGroup" package="moqui.training">
+    <entity entity-name="PartyGroup" package="party">
         <field name="partyId" type="id" is-pk="true" />
         <field name="groupName" type="text-medium" />
         <field name="description" type="text-medium" />
@@ -39,7 +39,7 @@
     </entity>
 
     <!-- ContactMech -->
-    <entity entity-name="ContactMech" package="moqui.training">
+    <entity entity-name="ContactMech" package="party">
         <field name="contactMechId" type="id" is-pk="true" />
         <field name="contactMechTypeId" type="id" />
         <field name="infoString" type="text-medium" />
@@ -59,7 +59,7 @@
     </entity>
 
     <!-- PartyContactMech -->
-    <entity entity-name="PartyContactMech" package="moqui.training">
+    <entity entity-name="PartyContactMech" package="party">
         <field name="partyId" type="id" is-pk="true" />
         <field name="contactMechId" type="id" is-pk="true" />
         <field name="fromDate" type="date-time" is-pk="true" />

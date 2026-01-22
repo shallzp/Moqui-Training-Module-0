@@ -4,7 +4,7 @@
 
     <resource name="persons">
         <method type="get">
-            <entity name="moqui.training.Person" operation="list" />
+            <entity name="party.Person" operation="list" />
         </method>
         <method type="post">
             <service name="party.PartyServices.create#Person"/>

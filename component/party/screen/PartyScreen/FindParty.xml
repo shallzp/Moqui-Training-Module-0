@@ -5,12 +5,12 @@
 
     <!-- transition for calling createParty service -->
     <transition name="createParty">
-        <service-call name="create#moqui.training.Party" />
+        <service-call name="create#party.Party" />
         <default-response url="." />
     </transition>
 
     <actions>
-        <entity-find entity-name="moqui.training.Party" list="partyList" />
+        <entity-find entity-name="party.Party" list="partyList" />
     </actions>
 
     <widgets>
@@ -23,7 +23,7 @@
                 <!-- Create Party Button to open Form -->
                 <container-dialog id="createPartyDialog" button-text="Create Party">
                     <form-single name="CreateParty" transition="createParty">
-                        <auto-fields-entity entity-name="moqui.training.Party" field-type="edit" />
+                        <auto-fields-entity entity-name="party.Party" field-type="edit" />
                         <field name="submitButton">
                             <default-field title="Create">
                                 <submit />

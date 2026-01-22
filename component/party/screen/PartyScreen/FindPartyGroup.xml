@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
 
     <actions>
-        <entity-find entity-name="moqui.training.PartyGroup" list="partyGroupList" />
+        <entity-find entity-name="party.PartyGroup" list="partyGroupList" />
     </actions>
 
     <widgets>
